@@ -84,11 +84,9 @@ public interface EsAllCompanyRepository extends ElasticsearchRepository<EsCompan
 | LessThan      | findByPriceLessThan      | { "query" : { "bool" : { "must" : [ {"range" : {"price" : {"from" : null, "to" : ?, "include_lower" : true, "include_upper" : false } } } ] } }} |
 | LessThanEqual | findByPriceLessThanEqual | { "query" : { "bool" : { "must" : [ {"range" : {"price" : {"from" : null, "to" : ?, "include_lower" : true, "include_upper" : true } } } ] } }} |
 
+[完整的文档]: https://docs.spring.io/spring-data/elasticsearch/docs/current/reference/html/#elasticsearch.repositories	"地址"
 
 
-2. [更多查看此链接]: https://docs.spring.io/spring-data/elasticsearch/docs/current/reference/html/#elasticsearch.repositories
-
-   
 
 
 
