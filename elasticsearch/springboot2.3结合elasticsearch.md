@@ -52,7 +52,7 @@ public class EsCompany implements Serializable {
 
 > 更高级的复杂查询建议使用elasticsearchRestTemplate
 
-1.创建 Repository
+##### 创建 Repository
 
 ```java
 import org.springframework.data.domain.Page;
@@ -72,7 +72,7 @@ public interface EsAllCompanyRepository extends ElasticsearchRepository<EsCompan
 
 ```
 
-2.关键字举例子
+##### 关键字举例子
 
 | 关键字        | 例子                     | Elasticsearch Query String                                   |
 | ------------- | ------------------------ | :----------------------------------------------------------- |
@@ -84,13 +84,8 @@ public interface EsAllCompanyRepository extends ElasticsearchRepository<EsCompan
 | LessThan      | findByPriceLessThan      | { "query" : { "bool" : { "must" : [ {"range" : {"price" : {"from" : null, "to" : ?, "include_lower" : true, "include_upper" : false } } } ] } }} |
 | LessThanEqual | findByPriceLessThanEqual | { "query" : { "bool" : { "must" : [ {"range" : {"price" : {"from" : null, "to" : ?, "include_lower" : true, "include_upper" : true } } } ] } }} |
 
-[完整的文档]: https://docs.spring.io/spring-data/elasticsearch/docs/current/reference/html/#elasticsearch.repositories	"地址"
 
-
-
-
-
-
+>完整spring-data/elasticsearch 文档 [点击查看](https://docs.spring.io/spring-data/elasticsearch/docs/current/reference/html/#elasticsearch.repositories)
 
 #### elasticsearchRestTemplate 复杂搜索
 
